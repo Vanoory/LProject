@@ -32,7 +32,6 @@ int main()
         try {
             if (choice == 1) {
                 myStore.showAll();
-                // Демонстрація статичного методу
                 cout << "Всього створено товарів: " << Product::getTotalCount() << endl;
             }
             else if (choice == 2) {

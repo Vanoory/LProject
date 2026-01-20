@@ -27,7 +27,7 @@ void FragileProduct::showInfo() const
 
 void FragileProduct::save(ofstream& file) const
 {
-    file << 1 << endl; // Тип об'єкта
+    file << 1 << endl;
     Product::save(file);
     file << fragilityCoeff << endl;
 }

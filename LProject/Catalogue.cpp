@@ -19,11 +19,10 @@ void Catalogue::addProduct(Product* obj)
 
 void Catalogue::removeProduct(string code)
 {
-    // Використання ітератора для пошуку і видалення
     for (auto it = products.begin(); it != products.end(); ++it) {
         if ((*it)->getCode() == code) {
-            delete* it; // Звільняємо пам'ять
-            products.erase(it); // Видаляємо з вектора
+            delete* it;
+            products.erase(it);
             cout << "product has been removed." << endl;
             return;
         }
@@ -94,7 +93,6 @@ void Catalogue::loadFromFile(string filename)
         return;
     }
 
-    // Очищаємо поточні дані перед завантаженням
     for (auto p : products) delete p;
     products.clear();
 

@@ -17,6 +17,6 @@ namespace Store {
         void showInfo() const override;
         void save(ofstream& file) const override;
         void load(ifstream& file) override;
-        int getType() const override; // Повертає 3
+        int getType() const override;
     };
 }

@@ -7,7 +7,6 @@
 
 using namespace Store;
 
-// Функтор для сортування за ціною
 struct CmpByPrice {
     bool operator()(const Product* left, const Product* right) const {
         return left->getPrice() < right->getPrice();
@@ -31,6 +30,5 @@ public:
     void saveToFile(string filename);
     void loadFromFile(string filename);
 
-    // Доступ через індекс для редагування (якщо треба)
     Product* getProductByCode(string code);
 };

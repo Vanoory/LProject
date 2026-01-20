@@ -16,7 +16,7 @@ namespace Store {
         double price;
         string description;
 
-        static int totalCount; // Статичне поле
+        static int totalCount; 
 
     public:
         Product();
@@ -34,11 +34,10 @@ namespace Store {
         virtual void showInfo() const;
         virtual void save(ofstream& file) const;
         virtual void load(ifstream& file);
-        virtual int getType() const = 0; // Чисто віртуальний метод
+        virtual int getType() const = 0;
 
-        static int getTotalCount(); // Статичний метод
+        static int getTotalCount();
 
-        // Перевантаження оператора порівняння
         bool operator==(const Product& other) const;
     };
 }

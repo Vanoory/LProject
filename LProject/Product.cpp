@@ -19,7 +19,7 @@ Product::Product(string code, string name, double price, string description)
     this->code = code;
     this->name = name;
 
-    if (price < 0) throw "Ціна не може бути від'ємною!"; // Виняток
+    if (price < 0) throw "Ціна не може бути від'ємною!";
     this->price = price;
 
     this->description = description;
@@ -27,7 +27,6 @@ Product::Product(string code, string name, double price, string description)
 
 Product::~Product()
 {
-    // totalCount--; // Логіка за бажанням
 }
 
 int Product::getId() const { return id; }
